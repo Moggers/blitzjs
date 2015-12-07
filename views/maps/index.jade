@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+ table
+  thead
+  h1 Maps
+  tbody
+   for object in rows
+    tr
+     for subobject in object
+      td= subobject
+ button(onclick="move(); return false") Add Map
+script.
+ function move() {
+  window.location.href = '/maps/add'
+ }
+
